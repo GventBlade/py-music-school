@@ -1,4 +1,3 @@
-from os.path import basename
 
 from musician.views import MusicianViewSet
 from django.urls import path, include
@@ -6,10 +5,10 @@ from rest_framework import routers
 
 router = routers.DefaultRouter()
 
-router.register("musician", MusicianViewSet, basename="musician")
+router.register("musician", MusicianViewSet, basename="manage")
 
 urlpatterns = [
-    path("", include(router.urls)),
+    path("", include(router.urls, namespace="musician")),
 ]
 
 app_name = "musician"
