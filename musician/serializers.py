@@ -11,6 +11,7 @@ class MusicianSerializer(serializers.ModelSerializer):
             "first_name",
             "last_name",
             "instrument",
+            "age",
             "is_adult",
             "date_of_applying",
         )
