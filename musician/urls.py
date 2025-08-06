@@ -8,7 +8,7 @@ router = routers.DefaultRouter()
 router.register("musician", MusicianViewSet, basename="manage")
 
 urlpatterns = [
-    path("", include(router.urls, namespace="musician")),
+    path("", include(router.urls)),
 ]
 
 app_name = "musician"
